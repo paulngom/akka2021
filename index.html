@@ -1,0 +1,1201 @@
+<!DOCTYPE html> 
+<html> 
+<title>AGENCE KEUR KHALIFA</title>
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> 
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+<link href="assets/css/styles.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/vex/css/vex.css" />
+    <link rel="stylesheet" href="assets/vex/css/vex-theme-os.css" />
+    <link href="assets/ratchet/css/ratchet.css" rel="stylesheet"> 
+    <link href="assets/jqueryui/jquery-ui.css" rel="stylesheet">
+ 
+</head> 
+   
+<body><!--background-repeat: no-repeat;background-position: top bottom;--> 
+
+<script id="splash-tpl" type="text/template">
+    <div class="content" id="content" style="background-repeat:no-repeat;background-size:100%;">
+     <div class="supc"">
+     <div class="subc">
+
+    <table width="100%" height="100%"><tr><td>
+          <p>&nbsp;</p>
+        <table width="100%"><tr><td align="center"><img src="assets/pics/cemlycee.png" height="50" width="50"></td></tr></table>
+          <table width="100%"><tr><td align="center"><b>AGENCE KEUR KHALIFA</b></td></tr></table>
+          <p>&nbsp;</p>
+            <table width="100%"><tr><td align="center"> 
+             
+            <table><tr><td align="center"><b>Votre date et heure système sont actuellement:</b></td></tr></table>
+            <table><tr>
+            <td align="center">16-DEC-2020</td>
+            </tr> 
+ 			<tr><td align="center">15:21 GMT</td>
+            </tr>             
+			<tr><td>&nbsp;</td>
+            </tr>             
+            <tr> 
+            <tr> 
+            <td align="center">Cliquez sur le bouton CONTINUER si ces donn&eacute;es sont bonnes. Sinon mettez-les &agrave; jour d'abord.</td> 
+            </tr> 
+             <tr> 
+            <td align="center"><button class="btn btn-positive" id="but1" style="width: 100px;">CONTINUER</button></td> 
+            </tr> 
+
+            </table>    
+            
+              
+             </td></tr></table>
+
+       <hr/>
+    <p>&nbsp;</p>
+    <div id="mydialog" title="AKK"></div> 
+    <div id="loader">
+    </div>
+       </td></tr></table>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <!--<p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>--> 
+</div>
+</div>
+    </div> 
+
+<div style="display:none" id="divholder"></div>
+</script>
+
+<script id="connectme-tpl" type="text/template">
+    <div class="content" id="content" style="background-repeat:no-repeat;background-size:100%;">
+     <div class="supc"">
+     <div class="subc">
+
+    <table width="100%" height="100%"><tr><td>
+          <p>&nbsp;</p>
+        <table width="100%"><tr><td align="center"><img src="assets/pics/cemlycee.png" height="50" width="50"></td></tr></table>
+              
+          <table width="100%"><tr><td align="center"><b>16-DEC-2020</b></td></tr></table>
+          <table width="100%"><tr><td align="center"><b>AGENCE KEUR KHALIFA</b></td></tr></table>
+          <p>&nbsp;</p>
+
+            <table width="100%"><tr><td align="center"> 
+            
+            <table><tr><td align="center"><b>Connexion</b></td></tr></table>
+            <table><tr><td align="right"> 
+            <b>Pseudo</b>
+            </td> 
+            <td><input type="text"/></td>
+            </tr> 
+ 			<tr><td align="right"> 
+            <b>Mot de passe</b>
+            </td> 
+            <td><input type="text"/></td>
+            </tr>             
+            <tr> 
+            <td colspan="2"></td> 
+            </tr> 
+             <tr> 
+            <td colspan="2" align="center"><button class="btn btn-positive" id="but1"  onclick="loadMenu();" style="width: 100px;">VALIDER</button></td> 
+            </tr> 
+
+            </table>    
+            
+              
+             </td></tr></table>
+
+       <hr/>
+       <table width="100%"><tr><td align="center"><font size="1">16-DEC-2020  15:50 GMT</font></td></tr></table>
+    <p>&nbsp;</p>
+    <div id="mydialog" title="AKK"></div> 
+    <div id="loader">
+    </div>
+       </td></tr></table>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <!--<p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>--> 
+</div>
+</div>
+    </div> 
+    
+    <div style="display:none" id="divholder"></div>
+</script>
+
+<script id="menu-tpl" type="text/template">
+    <div class="content" id="content" style="background-repeat:no-repeat;background-size:100%;">
+     <div class="supc"">
+     <div class="subc">
+
+    <table width="100%" height="100%"><tr><td>
+          <p>&nbsp;</p>
+        <table width="100%"><tr><td align="center"><img src="assets/pics/cemlycee.png" height="50" width="50"></td></tr></table>
+              
+          <table width="100%"><tr><td align="center"><b>16-DEC-2020</b></td></tr></table>
+          <table width="100%"><tr><td align="center" onclick="loadMenu();" style="color: #0000FF; cursor:pointer"><b>AGENCE KEUR KHALIFA</b></td></tr></table>
+          <p>&nbsp;</p>
+
+            <table width="100%"><tr><td align="center"><b>Menu principal</b></td></tr></table>
+         	<table width="100%"><tr><td align="center" height="50"><button class="btn btn-positive" style="width: 160px;" onclick="loadDispos();">LOCAUX DISPOS&nbsp;&nbsp;1000</button></td></tr></table>
+        		<table width="100%"><tr><td align="center" height="50"><button class="btn btn-positive" style="width: 160px;" onclick="loadMcontrats();">CONTRATS&nbsp;&nbsp;500</button></td></tr></table>
+        		<table width="100%"><tr><td align="center" height="50"><button class="btn btn-positive" style="width: 160px;" onclick="loadPayments();">PAIEMENTS</button></td></tr></table>
+
+       <hr/>
+       <table width="100%"><tr><td align="center"><font size="1">16-DEC-2020  15:50 GMT</font></td></tr></table>
+    <p>&nbsp;</p>
+    <div id="mydialog" title="AKK"></div> 
+    <div id="loader">
+    </div>
+       </td></tr></table>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <!--<p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>--> 
+</div>
+</div>
+    </div> 
+    
+    <div style="display:none" id="divholder"></div>
+</script>
+
+ 
+<script id="dispos-tpl" type="text/template">
+    <div class="content" id="content" style="background-repeat:no-repeat;background-size:100%;">
+     <div class="supc"">
+     <div class="subc">
+
+    <table width="100%" height="100%"><tr><td>
+          <p>&nbsp;</p>
+        <table width="100%"><tr><td align="center"><img src="assets/pics/cemlycee.png" height="50" width="50"></td></tr></table>
+              
+          <table width="100%"><tr><td align="center"><b>16-DEC-2020</b></td></tr></table>
+          <table width="100%"><tr><td align="center" onclick="loadMenu();" style="color: #0000FF; cursor:pointer"><b>AGENCE KEUR KHALIFA</b></td></tr></table>
+          <p>&nbsp;</p>
+
+            <table width="100%"><tr><td align="center"><b>Locaux disponibles&nbsp;&nbsp;1000</b></td></tr></table>
+            <table width="100%"><tr><td align="center"> 
+            <select id="typelocal" style="width:100px;cursor:pointer">
+            <option>Choisir</option>
+            <option>Appart</option>
+            <option>Magasin</option>
+            <option>Maison</option>
+		    </select>
+		    </td></tr></table>
+            <table width="100%">
+            <tr><td align="center"><b>Local</b></td><td align="center"><b>Adresse</b></td><td align="center"><b>Loyer</b></td><td align="center"><b>Caution</b></td><td align="center">Action?</td></tr>
+
+            <tr style="background: #00FFFF"><td height="50">Maison</td><td>pres de l'obelisque,TN</td><td align="center">200000</td><td align="center">200000</td><td align="center" onclick="loadNwcontrat();"><button id="but1" class="btn btn-primary">CONTRAT</button></td></tr>
+            <tr style="background: #00FFFF"><td height="50">Maison</td><td>garage environs,yembeul</td><td align="center">200000</td><td align="center">200000</td><td align="center"><button id="but1" class="btn btn-primary">CONTRAT</button></td></tr>
+            <tr style="background: #FFFFFF"><td height="50">Appart</td><td>num 169,malika</td><td align="center">80000</td><td align="center">80000</td><td align="center"><button id="but1" class="btn btn-primary">CONTRAT</button></td></tr>
+			</table>
+       <hr/>
+       <table width="100%"><tr><td align="center"><font size="1">16-DEC-2020  15:50 GMT</font></td></tr></table>
+    <p>&nbsp;</p>
+    <div id="mydialog" title="AKK"></div> 
+    <div id="loader">
+    </div>
+       </td></tr></table>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <!--<p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>--> 
+</div>
+</div>
+    </div> 
+    
+    <div style="display:none" id="divholder"></div>
+</script>
+
+ 
+ <script id="menucontrats-tpl" type="text/template">
+    <div class="content" id="content" style="background-repeat:no-repeat;background-size:100%;">
+     <div class="supc"">
+     <div class="subc">
+
+    <table width="100%" height="100%"><tr><td>
+          <p>&nbsp;</p>
+        <table width="100%"><tr><td align="center"><img src="assets/pics/cemlycee.png" height="50" width="50"></td></tr></table>
+              
+          <table width="100%"><tr><td align="center"><b>16-DEC-2020</b></td></tr></table>
+          <table width="100%"><tr><td align="center" onclick="loadMenu();" style="color: #0000FF;cursor:pointer"><b>AGENCE KEUR KHALIFA</b></td></tr></table>
+          <p>&nbsp;</p>
+
+            <table width="100%"><tr><td align="center"><b>CONTRATS</b></td></tr></table>
+         	<table width="100%"><tr><td align="center" height="50"><button class="btn btn-positive" style="width: 160px;" onclick="loadBlankCt();">NOUVEAU</button></td></tr></table>
+        		<table width="100%"><tr><td align="center" height="50"><button class="btn btn-positive" style="width: 160px;" onclick="loadLcontrats();">ENREGISTR&Eacute;S&nbsp;&nbsp;500</button></td></tr></table>
+       <hr/>
+       <table width="100%"><tr><td align="center"><font size="1">16-DEC-2020  15:50 GMT</font></td></tr></table>
+    <p>&nbsp;</p>
+    <div id="mydialog" title="AKK"></div> 
+    <div id="loader">
+    </div>
+       </td></tr></table>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <!--<p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>--> 
+</div>
+</div>
+    </div> 
+    
+    <div style="display:none" id="divholder"></div>
+</script>
+
+
+
+ <script id="nouvcontrat-tpl" type="text/template">
+    <div class="content" id="content" style="background-repeat:no-repeat;background-size:100%;">
+     <div class="supc"">
+     <div class="subc">
+
+    <table width="100%" height="100%"><tr><td>
+          <p>&nbsp;</p>
+        <table width="100%"><tr><td align="center"><img src="assets/pics/cemlycee.png" height="50" width="50"></td></tr></table>
+              
+          <table width="100%"><tr><td align="center"><b>16-DEC-2020</b></td></tr></table>
+          <table width="100%"><tr><td align="center" onclick="loadMenu();" style="color: #0000FF; cursor:pointer"><b>AGENCE KEUR KHALIFA</b></td></tr></table>
+          <p>&nbsp;</p>
+
+         
+         <table width="100%"><tr><td align="center"><b>Nouveau contrat</b></td></tr></table>
+         <table width="100%"><tr><td align="center">
+          <table width="100%"><tr><td align="center"> 
+            Num&eacute;ro contrat 
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <input type="text" style="width:100%" id="numcontrat">
+            </td> 
+            </tr>
+            </table>
+
+          <table width="100%"><tr><td align="center"> 
+            Nom locataire
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <input type="text" style="width:100%" id="locataire">
+            </td> 
+            </tr>
+            </table>
+         <table width="100%"><tr><td align="center"> 
+            T&eacute;l&eacute;phone
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <input type="text" style="width:100%" id="telephone">
+            </td> 
+            </tr>
+            </table>
+         <table width="100%"><tr><td align="center"> 
+            Local occup&eacute;
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <b>Maison</b>
+            </td> 
+            </tr>
+            </table>
+        <table width="100%"><tr><td align="center"> 
+            Adresse
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <b>pres de l'obelisque, TN</b>
+            </td> 
+            </tr>
+            </table>
+
+
+         <table width="100%"><tr><td align="center"> 
+            D&eacute;but contrat 
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <select id="jourd" style="width:80px;display:inline-block;">
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+		   <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+		   <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>31</option>
+            </select>&nbsp;&nbsp;<select id="moisd" style="width:80px;display:inline-block;">
+            <option>Janv</option>
+            <option>Fevr</option>
+            <option>Mars</option>
+            <option>Avri</option>
+            <option>Mai</option>
+            <option>Juin</option>
+            <option>Juil</option>
+            <option>Aout</option>
+            <option>Sept</option>
+            <option>Octo</option>
+            <option>Nove</option>
+		   <option>Dece</option>
+            </select>&nbsp;&nbsp;
+            <input type="text" id="anneed" style="width:70px;display:inline-block;" value="2020">
+            </td> 
+            </tr>
+            </table>
+
+         <table width="100%"><tr><td align="center"> 
+            Fin contrat 
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <select id="jourf" style="width:80px;display:inline-block;">
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+		   <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+		   <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+            </select>&nbsp;&nbsp;<select id="moisf" style="width:80px;display:inline-block;">
+            <option>Janv</option>
+            <option>Fevr</option>
+            <option>Mars</option>
+            <option>Avri</option>
+            <option>Mai</option>
+            <option>Juin</option>
+            <option>Juil</option>
+            <option>Aout</option>
+            <option>Sept</option>
+            <option>Octo</option>
+            <option>Nove</option>
+		   <option>Dece</option>
+            </select>&nbsp;&nbsp;
+            <input type="text" id="anneef" style="width:70px;display:inline-block;" value="2020">
+            </td> 
+            </tr>
+            </table>
+        <table width="100%"><tr><td align="center"> 
+            Montant loyer
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <input type="text" style="width:100%" id="loyer" value="200000">
+            </td> 
+            </tr>
+            </table>
+        <table width="100%"><tr><td align="center"> 
+            Montant caution
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <input type="text" style="width:100%" id="caution" value="200000">
+            </td> 
+            </tr>
+            </table>
+       </td></tr></table>     
+	  <table width="100%"><tr><td align="center"><button class="btn btn-positive" style="width: 100px;" onclick="saveContrat();">ENREGISTRER</button>&nbsp;&nbsp;<button id="sup" class="btn btn-positive" onclick="retBack();">RETOUR</button></td></tr></table>
+       <hr/>
+       <table width="100%"><tr><td align="center"><font size="1">16-DEC-2020  15:50 GMT</font></td></tr></table>
+    <p>&nbsp;</p>
+    <div id="mydialog" title="AKK"></div> 
+    <div id="loader">
+    </div>
+       </td></tr></table>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <!--<p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>--> 
+</div>
+</div>
+    </div> 
+    
+    <div style="display:none" id="divholder"></div>
+</script>
+
+ <script id="blankcontrat-tpl" type="text/template">
+    <div class="content" id="content" style="background-repeat:no-repeat;background-size:100%;">
+     <div class="supc"">
+     <div class="subc">
+
+    <table width="100%" height="100%"><tr><td>
+          <p>&nbsp;</p>
+        <table width="100%"><tr><td align="center"><img src="assets/pics/cemlycee.png" height="50" width="50"></td></tr></table>
+              
+          <table width="100%"><tr><td align="center"><b>16-DEC-2020</b></td></tr></table>
+          <table width="100%"><tr><td align="center" onclick="loadMenu();" style="color: #0000FF; cursor:pointer"><b>AGENCE KEUR KHALIFA</b></td></tr></table>
+          <p>&nbsp;</p>
+
+         
+         <table width="100%"><tr><td align="center"><b>Nouveau contrat</b></td></tr></table>
+         <table width="100%"><tr><td align="center">
+          <table width="100%"><tr><td align="center"> 
+            Num&eacute;ro contrat 
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <input type="text" style="width:100%" id="numcontrat">
+            </td> 
+            </tr>
+            </table>
+
+          <table width="100%"><tr><td align="center"> 
+            Nom locataire
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <input type="text" style="width:100%" id="locataire">
+            </td> 
+            </tr>
+            </table>
+         <table width="100%"><tr><td align="center"> 
+            T&eacute;l&eacute;phone
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <input type="text" style="width:100%" id="telephone">
+            </td> 
+            </tr>
+            </table>
+         <table width="100%"><tr><td align="center"> 
+            Local occup&eacute;
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <input type="text" style="width:100%" id="local" />
+            </td> 
+            </tr>
+            </table>
+        <table width="100%"><tr><td align="center"> 
+            Adresse
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <input type="text" style="width:100%" id="lieu" />
+            </td> 
+            </tr>
+            </table>
+
+
+         <table width="100%"><tr><td align="center"> 
+            D&eacute;but contrat 
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <select id="jourd" style="width:80px;display:inline-block;">
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+		   <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+		   <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>31</option>
+            </select>&nbsp;&nbsp;<select id="moisd" style="width:80px;display:inline-block;">
+            <option>Janv</option>
+            <option>Fevr</option>
+            <option>Mars</option>
+            <option>Avri</option>
+            <option>Mai</option>
+            <option>Juin</option>
+            <option>Juil</option>
+            <option>Aout</option>
+            <option>Sept</option>
+            <option>Octo</option>
+            <option>Nove</option>
+		   <option>Dece</option>
+            </select>&nbsp;&nbsp;
+            <input type="text" id="anneed" style="width:70px;display:inline-block;" value="">
+            </td> 
+            </tr>
+            </table>
+
+         <table width="100%"><tr><td align="center"> 
+            Fin contrat 
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <select id="jourf" style="width:80px;display:inline-block;">
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+		   <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+		   <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+            </select>&nbsp;&nbsp;<select id="moisf" style="width:80px;display:inline-block;">
+            <option>Janv</option>
+            <option>Fevr</option>
+            <option>Mars</option>
+            <option>Avri</option>
+            <option>Mai</option>
+            <option>Juin</option>
+            <option>Juil</option>
+            <option>Aout</option>
+            <option>Sept</option>
+            <option>Octo</option>
+            <option>Nove</option>
+		   <option>Dece</option>
+            </select>&nbsp;&nbsp;
+            <input type="text" id="anneef" style="width:70px;display:inline-block;" value="">
+            </td> 
+            </tr>
+            </table>
+        <table width="100%"><tr><td align="center"> 
+            Montant loyer
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <input type="text" style="width:100%" id="loyer" value="">
+            </td> 
+            </tr>
+            </table>
+        <table width="100%"><tr><td align="center"> 
+            Montant caution
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <input type="text" style="width:100%" id="caution" value="">
+            </td> 
+            </tr>
+            </table>
+       </td></tr></table>     
+	  <table width="100%"><tr><td align="center"><button class="btn btn-positive" style="width: 100px;" onclick="saveContrat();">ENREGISTRER</button>&nbsp;&nbsp;<button id="sup" class="btn btn-positive" onclick="retBackMc();">RETOUR</button></td></tr></table>
+       <hr/>
+       <table width="100%"><tr><td align="center"><font size="1">16-DEC-2020  15:50 GMT</font></td></tr></table>
+    <p>&nbsp;</p>
+    <div id="mydialog" title="AKK"></div> 
+    <div id="loader">
+    </div>
+       </td></tr></table>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <!--<p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>--> 
+</div>
+</div>
+    </div> 
+    
+    <div style="display:none" id="divholder"></div>
+</script>
+
+
+<script id="lcontrats-tpl" type="text/template">
+    <div class="content" id="content" style="background-repeat:no-repeat;background-size:100%;">
+     <div class="supc"">
+     <div class="subc">
+
+    <table width="100%" height="100%"><tr><td>
+          <p>&nbsp;</p>
+        <table width="100%"><tr><td align="center"><img src="assets/pics/cemlycee.png" height="50" width="50"></td></tr></table>
+              
+          <table width="100%"><tr><td align="center"><b>16-DEC-2020</b></td></tr></table>
+          <table width="100%"><tr><td align="center" onclick="loadMenu();" style="color: #0000FF; cursor:pointer"><b>AGENCE KEUR KHALIFA</b></td></tr></table>
+          <p>&nbsp;</p>
+
+            <table width="100%"><tr><td align="center"><b>Contrats enregistr&eacute;s&nbsp;&nbsp;1000</b></td></tr></table>
+            <table  width="100%"><tr><td align="right"><input type="text" style="width:100px" id="numcontrat" />
+            </td><td style="text-align:left"><button class="btn btn-positive">CHERCHER NUM.</button></td> 
+            </tr>
+            </table>
+            <!--
+            <table width="100%"><tr><td align="center"> 
+            <select id="statut" style="width:100px;cursor:pointer">
+            <option>Choisir</option>
+            <option>En cours</option>
+            <option>E&eacute;chus</option>
+		    </select>
+		    </td></tr></table>-->
+		    
+            <table width="100%">
+            <tr><td align="center"><b>Num. contrat</b></td><td align="center"><b>Local</b></td><td align="center"><b>Adresse</b></td><td align="center"><b>Statut</b></td><td align="center"><b>D&eacute;but</b></td><td align="center"><b>Fin</b></td><td align="center">?</td></tr>
+
+            <tr style="background: #00FF00"><td align="center">13454323</td><td height="50">Maison</td><td>pres de l'obelisque,TN</td><td id="topl" align="center" style="background: #FF0000">&eacute;chu</td><td align="center">10-MAR-2018</td><td align="center">10-DEC-2020</td><td align="center" onclick="loadPaie();"><button id="but1" class="btn btn-primary">ACTION</button></td></tr>
+            <tr style="background: #ADD8E6"><td align="center">90993999</td><td height="50">Appt</td><td>pres de l'obelisque,TN</td><td align="center" style="background: #FF0000">&eacute;chu</td><td align="center">10-MAR-2018</td><td align="center">10-DEC-2020</td><td align="center"><button id="but1" class="btn btn-primary">ACTION</button></td></tr>
+            <tr style="background: #FFFF00"><td align="center">30000098</td><td height="50">Magasin</td><td>pres de l'obelisque,TN</td><td align="center" style="background: #FFFFFF">en cours</td><td align="center">10-MAR-2018</td><td align="center">10-DEC-2021</td><td align="center"><button id="but1" class="btn btn-primary">ACTION</button></td></tr>
+            <tr style="background: #00FF00"><td align="center">27789993</td><td height="50">Maison</td><td>pres de l'obelisque,TN</td><td align="center" style="background: #FF0000">&eacute;chu</td><td align="center">10-MAR-2018</td><td align="center">10-DEC-2019</td><td align="center"><button id="but1" class="btn btn-primary">ACTION</button></td></tr>
+
+			</table>
+       <hr/>
+       <table width="100%"><tr><td align="center"><font size="1">16-DEC-2020  15:50 GMT</font></td></tr></table>
+    <p>&nbsp;</p>
+    <div id="mydialog" title="AKK"></div> 
+    <div id="loader">
+    </div>
+       </td></tr></table>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <!--<p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>--> 
+</div>
+</div>
+    </div> 
+    
+    <div style="display:none" id="divholder"></div>
+</script>
+
+
+ <script id="paie-tpl" type="text/template">
+    <div class="content" id="content" style="background-repeat:no-repeat;background-size:100%;">
+     <div class="supc"">
+     <div class="subc">
+
+    <table width="100%" height="100%"><tr><td>
+          <p>&nbsp;</p>
+        <table width="100%"><tr><td align="center"><img src="assets/pics/cemlycee.png" height="50" width="50"></td></tr></table>
+              
+          <table width="100%"><tr><td align="center"><b>16-DEC-2020</b></td></tr></table>
+          <table width="100%"><tr><td align="center" onclick="loadMenu();" style="color: #0000FF; cursor:pointer"><b>AGENCE KEUR KHALIFA</b></td></tr></table>
+          <p>&nbsp;</p>
+
+         
+         <table width="100%"><tr><td align="center"><b>Nouveau paiement</b></td></tr></table>
+         <table width="100%"><tr><td align="center">
+          <table width="100%"><tr><td align="center"> 
+            Num&eacute;ro contrat 
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <b>13454323</b>
+            </td> 
+            </tr>
+            </table>
+          <table width="100%"><tr><td align="center"> 
+            Nom locataire
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <b>Marwane Paye</b>
+            </td> 
+            </tr>
+            </table>
+         <table width="100%"><tr><td align="center"> 
+            T&eacute;l&eacute;phone
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <b>771309074</b>
+            </td> 
+            </tr>
+            </table>
+         <table width="100%"><tr><td align="center"> 
+            Local occup&eacute;
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <b>Maison</b>
+            </td> 
+            </tr>
+            </table>
+        <table width="100%"><tr><td align="center"> 
+            Adresse
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <b>pres de l'obelisque, TN</b>
+            </td> 
+            </tr>
+            </table>
+
+
+         <table width="100%"><tr><td align="center"> 
+            Date Paiement 
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <select id="jourd" style="width:80px;display:inline-block;">
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+		   <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+		   <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>31</option>
+            </select>&nbsp;&nbsp;<select id="moisd" style="width:80px;display:inline-block;">
+            <option>Janv</option>
+            <option>Fevr</option>
+            <option>Mars</option>
+            <option>Avri</option>
+            <option>Mai</option>
+            <option>Juin</option>
+            <option>Juil</option>
+            <option>Aout</option>
+            <option>Sept</option>
+            <option>Octo</option>
+            <option>Nove</option>
+		   <option>Dece</option>
+            </select>&nbsp;&nbsp;
+            <input type="text" id="anneed" style="width:70px;display:inline-block;" value="2020">
+            </td> 
+            </tr>
+            </table>
+         <table width="100%"><tr><td align="center"> 
+            Statut Contrat
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center" style="background: #FF0000"> 
+            <b>&Eacute;chu</b>
+            </td> 
+            </tr>
+            </table>
+            
+         <table width="100%"><tr><td align="center"> 
+            Montant loyer
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <b>200000</b>
+            </td> 
+            </tr>
+            </table>
+          <table width="100%"><tr><td align="center"> 
+            Total Impay&eacute;s(<b><font color="#FF0000">Janv, Fevr, Mars</font></b>)
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <b>600000</b>
+            </td> 
+            </tr>
+            </table>
+
+        <table width="100%"><tr><td align="center"> 
+            Montant encaiss&eacute;
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <input type="text" style="width:100%" id="caution" value="200000">
+            </td> 
+            </tr>
+            </table>
+
+       </td></tr></table>     
+	  <table width="100%"><tr><td align="center"><button class="btn btn-positive" style="width: 100px;" onclick="savePaie();">ENREGISTRER</button>&nbsp;&nbsp;<button id="sup" class="btn btn-positive" onclick="retBackLc();">RETOUR</button></td></tr></table>
+       <hr/>
+       <table width="100%"><tr><td align="center"><font size="1">16-DEC-2020  15:50 GMT</font></td></tr></table>
+    <p>&nbsp;</p>
+    <div id="mydialog" title="AKK"></div> 
+    <div id="loader">
+    </div>
+       </td></tr></table>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <!--<p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>--> 
+</div>
+</div>
+    </div> 
+    
+    <div style="display:none" id="divholder"></div>
+</script>
+
+
+
+<script id="paiements-tpl" type="text/template">
+    <div class="content" id="content" style="background-repeat:no-repeat;background-size:100%;">
+     <div class="supc"">
+     <div class="subc">
+
+    <table width="100%" height="100%"><tr><td>
+          <p>&nbsp;</p>
+        <table width="100%"><tr><td align="center"><img src="assets/pics/cemlycee.png" height="50" width="50"></td></tr></table>
+              
+          <table width="100%"><tr><td align="center"><b>16-DEC-2020</b></td></tr></table>
+          <table width="100%"><tr><td align="center" onclick="loadMenu();" style="color: #0000FF; cursor:pointer"><b>AGENCE KEUR KHALIFA</b></td></tr></table>
+          <p>&nbsp;</p>
+
+            <table width="100%"><tr><td align="center"><b>Paiements re&ccedil;us</b></td></tr></table>
+            <table  width="100%"><tr><td align="right"><input type="text" style="width:100px" id="numcontrat" />
+            </td><td style="text-align:left"><button class="btn btn-positive">NUM. CONTRAT</button></td> 
+            </tr>
+            </table>
+          <table width="100%"><tr><td align="center">
+         <!--
+         <table width="100%"><tr><td align="center"> 
+            Date d&eacute;but 
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <select id="jourd" style="width:80px;display:inline-block;">
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+		   <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+		   <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>31</option>
+            </select>&nbsp;&nbsp;<select id="moisd" style="width:80px;display:inline-block;">
+            <option>Janv</option>
+            <option>Fevr</option>
+            <option>Mars</option>
+            <option>Avri</option>
+            <option>Mai</option>
+            <option>Juin</option>
+            <option>Juil</option>
+            <option>Aout</option>
+            <option>Sept</option>
+            <option>Octo</option>
+            <option>Nove</option>
+		   <option>Dece</option>
+            </select>&nbsp;&nbsp;
+            <input type="text" id="anneed" style="width:70px;display:inline-block;" value="">
+            </td> 
+            </tr>
+            </table>
+
+         <table width="100%"><tr><td align="center"> 
+            Date fin 
+            </td> 
+            </tr> 
+            </table>
+            <table><tr><td align="center"> 
+            <select id="jourf" style="width:80px;display:inline-block;">
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+		   <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+		   <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+            </select>&nbsp;&nbsp;<select id="moisf" style="width:80px;display:inline-block;">
+            <option>Janv</option>
+            <option>Fevr</option>
+            <option>Mars</option>
+            <option>Avri</option>
+            <option>Mai</option>
+            <option>Juin</option>
+            <option>Juil</option>
+            <option>Aout</option>
+            <option>Sept</option>
+            <option>Octo</option>
+            <option>Nove</option>
+		   <option>Dece</option>
+            </select>&nbsp;&nbsp;
+            <input type="text" id="anneef" style="width:70px;display:inline-block;" value="">
+            </td> 
+            </tr>
+            </table>
+            <table width="100%"><tr><td align="center"> 
+            <select id="statut" style="width:100px;cursor:pointer">
+            <option>Choisir</option>
+            <option>En cours</option>
+            <option>E&eacute;chus</option>
+		    </select>
+		    </td></tr></table>
+            -->
+            <table width="100%">
+            <tr><td align="center"><b>Num. contrat</b></td><td align="center"><b>Local</b></td><td align="center"><b>Encaiss&eacute;</b></td><td align="center"><b>Contrat</b></td><td align="center"><b>Date</b></td><td align="center"><b>Impay&eacute;s</b></td></tr>
+
+            <tr style="background: #00FF00"><td align="center">13454323</td><td height="50">Maison</td><td>100000</td><td id="topl" align="center" style="background: #FF0000">&eacute;chu</td><td align="center">10-MAR-2018</td><td align="center">200000</td></tr>
+            <tr style="background: #ADD8E6"><td align="center">90993999</td><td height="50">Appt</td><td>200000</td><td align="center" style="background: #FF0000">&eacute;chu</td><td align="center">10-MAR-2018</td><td align="center">400000</td></tr>
+            <tr style="background: #FFFF00"><td align="center">30000098</td><td height="50">Magasin</td><td>200000</td><td align="center" style="background: #FFFFFF">en cours</td><td align="center">10-MAR-2018</td><td align="center">300000</td></tr>
+            <tr style="background: #00FF00"><td align="center">27789993</td><td height="50">Maison</td><td>200000</td><td align="center" style="background: #FF0000">&eacute;chu</td><td align="center">10-MAR-2018</td><td align="center">0</td></tr>
+           <tr><td align="center"><b>Total</b></td><td align="center"><b></b></td><td><b>700000</b></td><td align="center"><b></b></td><td align="center"><b></b></td><td align="center"><b>900000</b></td></tr>
+
+			</table>
+       <hr/>
+       <table width="100%"><tr><td align="center"><font size="1">16-DEC-2020  15:50 GMT</font></td></tr></table>
+    <p>&nbsp;</p>
+    <div id="mydialog" title="AKK"></div> 
+    <div id="loader">
+    </div>
+       </td></tr></table>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <!--<p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>--> 
+</div>
+</div>
+    </div> 
+    
+    <div style="display:none" id="divholder"></div>
+</script>
+
+<script id="quittance-tpl" type="text/template">
+    <div class="content" id="content" style="background-repeat:no-repeat;background-size:100%;">
+     <div class="supc"">
+     <div class="subc">
+
+    <table width="100%" height="100%"><tr><td>
+          <p>&nbsp;</p>
+                    <table width="100%"><tr><td align="center" onclick="loadMenu();" style="cursor:pointer"><b>AGENCE IMMOBILIERE KEUR KHALIFA ABABACAR</b></td></tr></table>
+					<table width="100%"><tr><td align="center" onclick="loadMenu();" style="cursor:pointer"><font size="1"><b>Tel: 772646452 763033570</b></font></td></tr></table>
+
+          <hr/>
+	<p>&nbsp;</p>
+       <table width="100%"><tr><td align="center"> 
+            QUITTANCE DE LOYER 123487654
+            </td> 
+            </tr> 
+            </table>
+        <p>&nbsp;</p>
+         <table width="100%"><tr><td> 
+            Je soussign&eacute; le g&eacute;rant de l'agence immobili&egrave;re Keur Khalifa Ababacar d&eacute;clare  
+            </td> 
+            </tr> 
+            </table>
+          <table width="100%"><tr><td> 
+            avoir re&ccedil;u de <b>Doudou Mbathie</b> le montant de <b>70000 FCFA</b>  
+            </td> 
+            </tr>
+            <tr><td>en attente d'un restant de <b>30000 FCFA</b>.</td></tr>
+            <tr><td align="right">&nbsp;</td></tr>    
+            <tr><td align="right">Fait &agrave; Tivawone, le 19 D&eacute;cembre 2020.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+            <tr><td align="right">&nbsp;</td></tr>    
+            <tr><td align="right">&nbsp;</td></tr>    
+            <tr><td align="right">&nbsp;</td></tr>    
+            <tr><td align="right">Le G&eacute;rant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>     
+            </table>    
+    <p>&nbsp;</p>
+    <div id="mydialog" title="AKK"></div> 
+    <div id="loader">
+    </div>
+       </td></tr></table>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <!--<p>&nbsp;</p>
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>--> 
+</div>
+</div>
+    </div> 
+    
+    <div style="display:none" id="divholder"></div>
+</script>
+
+
+<script src="assets/vex/js/vex.combined.min.js"></script>
+<script>vex.defaultOptions.className = 'vex-theme-os'</script>
+<script src="js/preventback.js"></script>
+<script src="lib/handlebars.js"></script> 
+ 
+<script src="lib/jquery-3.4.1.min.js"></script> 
+<script src="lib/jquery-ui.js"></script> 
+<script src="lib/jquery.alphanum.js"></script> 
+<script src="lib/jquery.blockUI.js"></script>
+
+<script src="js/QuittanceView.js"></script>
+<script src="js/PaiementsView.js"></script>
+<script src="js/PaieView.js"></script>
+<script src="js/LcontratsView.js"></script>
+<script src="js/BlkcontratView.js"></script>
+<script src="js/NwcontratView.js"></script>
+<script src="js/McontratsView.js"></script>
+<script src="js/DisposView.js"></script>
+<script src="js/MenuView.js"></script>
+<script src="js/ConnectMeView.js"></script>
+<script src="js/SplashView.js"></script>
+<script src="js/myjs.js"></script>   
+<script src="js/app.js"></script> 
+</body> 
+</html> 

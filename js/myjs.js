@@ -23,6 +23,17 @@ function loadNwcontrat(){
 
 }
 
+function loadNlocal(){
+		var nlocalview=new NLocalView();
+		nlocalview.setJson({});
+		$('body').html(nlocalview.$el);
+
+}
+
+function filter(){
+	document.getElementById("appart").style.display="none";
+}
+
 function saveContrat(){
 	vex.dialog.alert(showAlert("Contrat bien enregistr&eacute;!"));
  }
@@ -69,7 +80,7 @@ function setDispo(){
 			$('body').html(lcontratsview.$el);*/
 			
 			document.getElementById("topl").style.background="#FFFFFF";
-			document.getElementById("topl").innerHTML="en cours";
+			document.getElementById("topl").innerHTML="dispo";
 }
 function loadPaie(){
   var msg=showAlert("Si vous voulez continuer avec un paiement, cliquez sur le bouton PAIEMENT. Si le local est disponible, cliquez sur LOCAL DISPO. Sinon ANNULER pour tout autre choix.");
@@ -78,7 +89,7 @@ function loadPaie(){
      input: [
         '<button class="btn btn-positive" onclick="setDispo();">LOCAL DISPO</button>',
         '&nbsp;<button class="btn btn-positive" onclick="setPaie();">PAIEMENT</button>',
-       '&nbsp;<button class="btn btn-positive" onclick="window.close();">ANNULER</button>'
+       '&nbsp;<button class="btn btn-positive" onclick="loadBlankCt();">MODIFIER</button>'
   ].join(''),
     buttons: [
     ],

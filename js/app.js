@@ -41,6 +41,7 @@
 
 });
 
+NLocalView.prototype.template = Handlebars.compile($("#nouvlocal-tpl").html());
 QuittanceView.prototype.template = Handlebars.compile($("#quittance-tpl").html());
 PaiementsView.prototype.template = Handlebars.compile($("#paiements-tpl").html());
 PaieView.prototype.template = Handlebars.compile($("#paie-tpl").html());

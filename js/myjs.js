@@ -57,7 +57,7 @@ function loadBlankCt(){
 }
 
 function retBackMc(){
-	loadMcontrats();
+	loadLcontrats();
 }
 
 
